@@ -339,3 +339,14 @@ footer a{
   transform-origin: center center;
   transform: rotate(-45deg) translate(-50%, -50%);
 }
+
+@media screen and (max-width: 600px){
+
+  .todo-wrapper{
+    width: 100%;
+    min-height: 100%;
+  }
+	input {
+    padding: 3px 5px;
+	} 
+}

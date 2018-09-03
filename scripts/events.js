@@ -52,11 +52,14 @@ $(document).on('click', '.todo-text', function(){
 /**
  * Edit Item value
  */
-$(document).on('keyup', '.todo-input', function(){
+$(document).on('keyup', '.todo-input', function(e){
   var todos = getTodos();
   var key = this.id.split('_')[1];
   todos[key].value = this.value;
   setTodos(todos);
+  if(e.keyCode == 13) {
+	  renderList();
+  }
 });
 /**
  * Delete Item from the list
