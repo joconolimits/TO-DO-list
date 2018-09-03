@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src='./scripts/global.js'></script>
+  <script src='./scripts/helpers.js'></script>
+  <script src='./scripts/render.js'></script>
+  <script src='./scripts/events.js'></script>  
+  <div id="app">
+    <section class="todo-wrapper">
+      <h1 class="todo-title">Simple TO-DO list</h1>
+      <input type="text" class="input-todo" placeholder="create new to-do item" id="new_todo">
+      <div class="btn btn-add" id="addItem">+</div>
+      <div class="mark-all" id="sel_all">
+        <input id="all" type="checkbox" class="all-checkbox" isChecked="0">
+        <label for="all"></label>
+        <span class="all-text">Mark All</span>
+      </div>
+      <div v-if="pending.length > 0">
+        <p class="status busy"></p>
+        <ul class="todo-list" id="active_list"></ul>
+		    <ul class="todo-list" id="complete_list"></ul>
+      </div> 
+      <div class="control-buttons">
+        <div class="btn btn-secondary filter underline" id="show_2">ALL</div>
+        <div class="btn btn-secondary filter" id="show_0">ACTIVE</div>
+        <div class="btn btn-secondary filter" id="show_1">COMPLETED</div>
+      </div>
+    </section>
+  </div>
+</body>
